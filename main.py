@@ -83,20 +83,7 @@ def fight_action(player, enemy):
                 player['life'] -= fullMonsterAttack()
 
             elif pchoice == '3':
-                print(f"{player['name']} try to run, {enemy['name']}, try to avoid that by using Energy.")
-                time.sleep(20)
-                if player['energy'] >= fullEnemyEnergy():
-                    print(f"Enemy have more energy, {fullEnemyEnergy()} while you only have {player['energy']} energy.")
-                    time.sleep(2)
-                    print('Run failed')
-                    time.sleep(2)
-                    new_round = False
-                    game_on = False
-                else:
-                    print(f"{enemy['name']} turn, {enemy['name']} attack you.")
-                    print(enemyAttackVisual())
-                    time.sleep(2)
-                    player['life'] -= fullMonsterAttack()
+                print(run(player, enemy))
 
             #elif pchoice == '3':
                 #for i in game_result:
